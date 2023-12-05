@@ -1,0 +1,60 @@
+@import "../../global.scss";
+
+.nav-container {
+  width: 100%;
+  height: 96px;
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-right: 1px solid $stroke-color;
+  border-bottom: 2px solid $stroke-color;
+  background: $bg-color;
+
+  .nav-buttons {
+    width: 100%;
+    padding: 0px 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .btn {
+      @include roboto-condensed(500, normal);
+      color: $text-color;
+      text-align: center;
+      font-size: 26px;
+      line-height: normal;
+      letter-spacing: 0.78px;
+      text-transform: capitalize;
+      color: #6f788f;
+      border-radius: 30px;
+      padding: 10px;
+      cursor: pointer;
+      transition: all ease-in-out 300ms;
+
+      &:hover {
+        background-color: #6f788f20;
+        box-shadow: 2px 2px 10px 1px #6f788f20;
+      }
+    }
+
+    .selected {
+      color: #495062;
+    }
+
+    .selection-line {
+      width: 87px;
+      height: 4px;
+      flex-shrink: 0;
+      border-radius: 30px;
+      background: $text-color;
+    }
+
+    svg {
+      // fill: #6f788f;
+      margin: 0 10px;
+    }
+  }
+}
